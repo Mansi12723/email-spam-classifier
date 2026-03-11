@@ -111,7 +111,7 @@ tfidf = pickle.load(open('vectorizer.pkl', 'rb'))
 model = pickle.load(open('model.pkl', 'rb'))
 
 # ---------------- SCAN SECTION ----------------
-st.subheader("Scan Email")
+
 input_text = st.text_area("Paste email content below:", height=200)
 
 if st.button("Analyze Email"):
@@ -129,4 +129,5 @@ if st.button("Analyze Email"):
             st.error("⚠ Spam Email Detected")
         else:
             st.success("✔ Safe Email")
+
 
